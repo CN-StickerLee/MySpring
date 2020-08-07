@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-    <bean id="person01" class="com.sticker.pojo.Person">
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+    <bean class="com.sticker.pojo.Person">
         <property name="name" value="woshishui"></property>
         <property name="age" value="18"></property>
     </bean>
@@ -14,5 +15,17 @@
         <constructor-arg name="name" value="haha"></constructor-arg>
         <constructor-arg name="age" value="21"></constructor-arg>
     </bean>
+
+    <context:component-scan base-package="com.sticker">
+<!--        <context:exclude-filter type="assignable" expression="com.sticker.dao.BookDao"/>-->
+<!--        <context:exclude-filter type="assignable" expression="com.sticker.service.BookService"/>-->
+    </context:component-scan>
+
+    <!--    include-filter要禁用掉默认规则才可生效use-default-filters="false"-->
+<!--    <context:component-scan base-package="com.sticker" use-default-filters="false">-->
+<!--        <context:include-filter type="annotation" expression="org.springframework.stereotype.Service"/>-->
+<!--    </context:component-scan>-->
+
+<!--    <bean class="org.apache.commons.logging.LogFactory" abstract="true"></bean>-->
 
 </beans>

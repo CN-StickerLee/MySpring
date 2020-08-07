@@ -52,6 +52,15 @@
 <!--            <scope>test</scope>-->
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/org.springframework/spring-test -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <version>4.0.0.RELEASE</version>
+<!--            <scope>test</scope>-->
+        </dependency>
+
+
         <!--    数据库连接池  -->
         <dependency>
             <groupId>com.mchange</groupId>

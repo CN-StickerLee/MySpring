@@ -4,12 +4,22 @@ public class Person {
 
     private String name;
     private Integer age;
+    private Car car;
+
+    public Car getCar() {
+        return car;
+    }
+
+    public void setCar(Car car) {
+        this.car = car;
+    }
 
     @Override
     public String toString() {
-        return "person{" +
+        return "Person{" +
                 "name='" + name + '\'' +
                 ", age=" + age +
+                ", car=" + car +
                 '}';
     }
 
